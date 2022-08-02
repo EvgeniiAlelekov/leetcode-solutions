@@ -1,5 +1,7 @@
 package medium;
 
+import java.util.logging.Logger;
+
 /**
  * Link of the problem: <a href="https://leetcode.com/problems/add-two-numbers/">...</a>
  * <p>
@@ -10,6 +12,7 @@ package medium;
  * Author Evgenii Alelekov 02.08.2022
  */
 public class AddTwoNumbers {
+    private static final Logger LOGGER = Logger.getLogger(AddTwoNumbers.class.getName());
     public static void main(String[] args) {
         int l1n1 = 2;
         int l1n2 = 4;
@@ -17,8 +20,9 @@ public class AddTwoNumbers {
         int l2n1 = 5;
         int l2n2 = 6;
         int l2n3 = 4;
-        System.out.println(AddTwoNumbersSolution.addTwoNumbers(new ListNode(l1n1, (new ListNode(l1n2,
-                (new ListNode(l1n3))))), new ListNode(l2n1, (new ListNode(l2n2, (new ListNode(l2n3)))))).toString());
+        String resultMessage = AddTwoNumbersSolution.addTwoNumbers(new ListNode(l1n1, (new ListNode(l1n2,
+                (new ListNode(l1n3))))), new ListNode(l2n1, (new ListNode(l2n2, (new ListNode(l2n3)))))).toString();
+        LOGGER.info(resultMessage);
     }
 }
 
