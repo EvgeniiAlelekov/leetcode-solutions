@@ -35,7 +35,7 @@ public class RemoveElement {
         }
 
         private static void changeArray(int[] inputArray, int i, int needDelete) {
-            int emptySlot = -1; //we can't wrap array to Integer
+            int emptySlot = -1; //we can't wrap int array to Integer array
             for(int j = i; j < inputArray.length; j++){
                 if(inputArray.length>(j+1)) {
                     inputArray[j] = inputArray[j+1];
